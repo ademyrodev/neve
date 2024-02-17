@@ -1,0 +1,20 @@
+class LinkedNode
+  value Int
+  next LinkedNode?
+
+  fun LinkedNode.new(value Int)
+    LinkedNode with
+      value = value
+      next = nil
+    end
+  end
+end
+
+fun main
+  let linked_node = LinkedNode.new -1
+
+  10.times |i| do 
+    var other_node = LinkedNode.new i
+    other_node.next = linked_node
+  end
+end
